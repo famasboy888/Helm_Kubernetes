@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-server-deployment
+  labels:
+    app: data-server
+spec:
+  replicas: 1
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app: data-server
+  template:
+    metadata:
+      labels:
+        app: data-server
+    spec:
+      containers:
+      - name: data-server
+        image: famasboy888/react-data-server:0.0.1.RELEASE
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
