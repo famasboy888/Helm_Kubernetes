@@ -77,3 +77,7 @@ spec:
     matchLabels:
       app: nginx
 ```
+
+<p align="left">
+  <img width="80%" height="80%" src="https://github.com/famasboy888/Helm_Kubernetes/assets/23441168/7372de50-4a10-4117-8d56-fba64255f859s">
+</p>
