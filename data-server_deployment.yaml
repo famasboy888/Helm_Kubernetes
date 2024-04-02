@@ -1,23 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: data-server-deployment
-  labels:
-    app: data-server
+  name: data-server-backend
 spec:
-  replicas: 1
-  revisionHistoryLimit: 0
   selector:
     matchLabels:
       app: data-server
+      tier: backend
+      track: stable
+  replicas: 1
   template:
     metadata:
       labels:
         app: data-server
+        tier: backend
+        track: stable
     spec:
       containers:
       - name: data-server
         image: famasboy888/react-data-server:0.0.1.RELEASE
         imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+        - name: http
+          containerPort: 8080

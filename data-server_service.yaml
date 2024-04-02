@@ -1,11 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: data-server-service
+  name: data-server
 spec:
   selector:
     app: data-server
+    tier: backend
   ports:
     - protocol: TCP
       port: 8080
-      targetPort: 8080
+      targetPort: http

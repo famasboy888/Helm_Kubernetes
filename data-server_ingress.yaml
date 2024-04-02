@@ -11,6 +11,6 @@ spec:
         path: "/"
         backend:
           service:
-            name: data-server-service
+            name: data-server
             port:
               number: 8080
