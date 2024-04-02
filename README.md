@@ -48,3 +48,32 @@ spec:
         ports:
         - containerPort: 80
 ```
+
+Think of `spec` as the blueprint of the pod:
+```bash
+spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+```
+
+## To make connections they use `labels` and `selectors`
+
+The `metadata` part contains ==> `labels`.
+```bash
+metadata:
+  name: nginx-deployment
+  labels:                     <======
+    app: nginx
+```
+
+While `specs` part contains ==> `selector`
+```bash
+spec:
+  replicas: 3
+  selector:         <=========
+    matchLabels:
+      app: nginx
+```
