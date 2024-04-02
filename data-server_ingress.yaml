@@ -10,7 +10,5 @@ spec:
       - pathType: Prefix
         path: "/"
         backend:
-          service:
-            name: data-server-service
-            port:
-              number: 8080
+          serviceName: data-server-service
+          servicePort: 8080
