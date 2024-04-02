@@ -1,22 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: react-webapp-deployment
   labels:
-    app: nginx
+    app: react-webapp
 spec:
   replicas: 3
+  revisionHistoryLimit: 0
   selector:
     matchLabels:
-      app: nginx
+      app: react-webapp
   template:
     metadata:
       labels:
-        app: nginx
+        app: react-webapp
     spec:
       containers:
       - name: react-webapp
         image: famasboy888/react-webapp:0.0.1.RELEASE
         imagePullPolicy: Always
         ports:
-        - containerPort: 80
+        - containerPort: 3000

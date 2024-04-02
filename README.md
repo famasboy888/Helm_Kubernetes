@@ -85,6 +85,8 @@ spec:
 
 ## Regarding Ports
 
+Note: You can refer to the Dockerfile `EXPOSE` port.
+
 <p align="left">
   <img width="50%" height="50%" src="https://github.com/famasboy888/Helm_Kubernetes/assets/23441168/343e6b07-87e0-443e-858a-a693d5e46c7e">
 </p>
