@@ -6,7 +6,9 @@ spec:
   selector:
     app: data-server
     tier: backend
+    type: NodePort
   ports:
     - protocol: TCP
       port: 8080
-      targetPort: http
+      targetPort: 8080
+      nodePort: 8080
