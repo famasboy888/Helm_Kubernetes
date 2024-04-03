@@ -9,3 +9,13 @@ If there are error pods because they are being created in master. We can apply t
 To clean up all `Error` pods, we can run this:
 
 `kubectl delete pods --field-selector status.phase=Failed`
+
+## Troubleshooting nodes
+
+You can curl from inside the nodeds:
+
+`kubectl run curl --image=curlimages/curl -i --tty -- sh`
+
+or
+
+`kubectl exec curl -i --tty -- sh`
